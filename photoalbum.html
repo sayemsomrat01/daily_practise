@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photo album | responsive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,300&family=Beau+Rivage&family=Cookie&family=Grape+Nuts&family=Zen+Kurenaido&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner-text {
+        text-align: center;
+        color: antiquewhite;
+        background-color: rgba(223, 99, 21, 0.819);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .banner-details {
+        font-size: 1.2em;
+        font-family: 'Cookie', cursive;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .price {
+        color: orangered;
+    }
+
+    hr {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        height: 5px;
+        background-color: black;
+        border: none;
+        border-radius: 3px;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .food-list {
+        margin: 5px;
+        padding: 5px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 320px;
+        width: 450px;
+        box-shadow: 3px 3px 5px solid black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+
+    .food-list img {
+        height: 250px;
+        width: 100%;
+    }
+
+    .food-list :hover {
+        transition: ease-out;
+    }
+
+    @media (min-width:720px) and (max-width:960px) {
+        .main-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width:360px) and (max-width:660px) {
+        .main-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+</style>
+
+<body>
+    <!-- navigation bar start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">YummyBRO!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            more options
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">HOME</a></li>
+                            <li><a class="dropdown-item" href="#">Order</a></li>
+                            <li><a class="dropdown-item" href="#">About</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navigation bar ends here -->
+    <section class="banner-Area">
+        <div class="banner">
+            <h1 class="banner-text">Welcome to food ordering online store</h1>
+            <p class="banner-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur deserunt quis
+                et
+                cupiditate, laboriosam blanditiis. Alias delectus fugit ullam veritatis repudiandae amet a non
+                voluptatibus
+                laudantium natus, vitae corporis pariatur nobis quisquam eaque, odio quis ea fugiat officia libero
+                necessitatibus? Excepturi provident, suscipit at sit mollitia tempora? Placeat, odio exercitationem?</p>
+        </div>
+    </section>
+    <hr>
+    <!-- food list and details starts here -->
+    <section class="food-container">
+        <div class="main-container">
+            <div class="food-list">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="">
+                <h2>Price :<span class="price">400</span></h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, minima.</p>
+            </div>
+            <div class="food-list">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="">
+                <h2>Price :<span class="price">401</span></h2>
+                <p>Ex id ratione sunt, officia voluptatem blanditiis sed dolorem molestiae!</p>
+            </div>
+            <div class="food-list">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="">
+                <h2>Price :<span class="price">402</span></h2>
+                <p>Odio in id, exercitationem excepturi repellendus consequuntur laudantium esse perferendis.</p>
+            </div>
+            <div class="food-list">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="">
+                <h2>Price :<span class="price">403</span></h2>
+                <p>Ut aliquid dolorem minima non fugit possimus illo cum nam.</p>
+            </div>
+            <div class="food-list">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="">
+                <h2>Price :<span class="price">404</span></h2>
+                <p>Cum molestias dolore perferendis sit natus neque, nam aliquid blanditiis!</p>
+            </div>
+            <div class="food-list">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="">
+                <h2>Price :<span class="price">405</span></h2>
+                <p>Veniam libero cumque cum possimus repellat eaque? Ad, sed vero.</p>
+            </div>
+            <div class="food-list">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="">
+                <h2>Price :<span class="price">406</span></h2>
+                <p>Nisi beatae nulla, eaque perspiciatis consequatur repudiandae excepturi odio ipsum?</p>
+            </div>
+            <div class="food-list">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="">
+                <h2>Price :<span class="price">407</span></h2>
+                <p>Architecto qui nostrum voluptates modi fuga sint nobis impedit vitae.</p>
+            </div>
+        </div>
+    </section>
+    <!-- food list details ends here -->
+</body>
+
+</html>
